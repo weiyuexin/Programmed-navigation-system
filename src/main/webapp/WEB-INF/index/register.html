@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>注册界面</title>
+    <link type="favicon" rel="shortcut icon" th:href="@{/static/img/pns.png}">
+    <!-- 引入Jquery  -->
+    <script src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <!-- 引入Layui.css -->
+    <link rel="stylesheet" th:href="@{/static/layui/css/layui.css}">
+    <!-- 引入Layui.js -->
+    <script th:src="@{/static/layui/layui.js}"></script>
+    <script th:src="@{/static/js/register.js}"></script>
+    <link rel="stylesheet" th:href="@{/static/css/register.css}">
+</head>
+
+<body>
+    <div class="layui-form" id="loginForm">
+        <div class="layui-form-item">
+            <h1>用&nbsp;户&nbsp;注&nbsp;册</h1>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <span class="decrib">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</span>
+                <input type="text" name="email" placeholder="请输入邮箱" class="layui-input" id="email" required>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <span class="decrib">昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</span>
+                <input type="text" name="username" placeholder="请输入昵称" class="layui-input" id="username">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <span class="decrib">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span>
+                <input type="password" name="password" placeholder="请输入密码" class="layui-input" id="password">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <span class="decrib">确认密码：</span>
+                <input type="password" name="check-password" placeholder="请再次输入密码" class="layui-input" id="check-password">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <span class="decrib">邮箱验证：</span>
+                <input type="text" name="emailcode" placeholder="请输入收到的验证码" autocomplete="off" class="layui-input-checkCode" required="" id="emailcode">
+                <span class="tel-code">点击获取验证码</span>
+            </div>
+        </div>
+        <br>
+        <div class="layui-form-item submit">
+            <div class="layui-input-block layui-col-md8">
+                <button class="layui-btn layui-btn-bypercent-left btn" id="submit">注 册</button> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                <button class="layui-btn layui-btn-bypercent-right" id="reset" type="reset">重 置</button>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+
+</body>
+
+</html>

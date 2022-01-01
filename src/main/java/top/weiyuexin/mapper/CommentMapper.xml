@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.weiyuexin.mapper.CommentMapper">
+    <resultMap id="CommentList" type="top.weiyuexin.entity.Comment">
+        <result property="id" column="id"></result>
+        <result property="articleId" column="articleId"></result>
+        <result property="content" column="content"></result>
+        <result property="authorId" column="authorId"></result>
+        <result property="time" column="time"></result>
+        <result property="star" column="star"></result>
+        <result property="level" column="level"></result>
+    </resultMap>
+    <insert id="insertComment" parameterType="top.weiyuexin.entity.Comment">
+        insert into articlecomment (articleId, content, authorId,time)
+        values (#{articleId}, #{content}, #{authorId},#{time})
+    </insert>
+    <select id="getAllCommentByArticleId" parameterType="int" resultMap="CommentList">
+        select *
+        from articlecomment
+        where articleId = #{articleId}
+        order by time desc
+    </select>
+    <update id="starComment" parameterType="top.weiyuexin.entity.Comment">
+        update articlecomment set star=star+1 where id = #{id}
+    </update>
+
+</mapper>
