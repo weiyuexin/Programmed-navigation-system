@@ -156,6 +156,7 @@ HTML、CSS、JavaScript、JQuery、Vue、Vue-route、Vuex、Ajax、Bootstrap 、
 
 ![image-20211229003353720](https://cdn.jsdelivr.net/gh/weiyuexin/blogimg@latest/img/202112290033880.png)
 
-### 代码开源地址（求star）
+### 代码开源地址
 
 [https://gitee.com/weiyuexin/programming-navigation-system](https://gitee.com/weiyuexin/programming-navigation-system)
+[https://github.com/weiyuexin/Programmed-navigation-system](https://github.com/weiyuexin/Programmed-navigation-system)
